@@ -1,9 +1,10 @@
 from .eda import eda
 from ml_models_from_scratch.load_data import load_data
+from .evaluate import evaluate
+from .LinearRegressionFromScratch import LinearRegression
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from .LinearRegressionFromScratch import LinearRegression
 
 import numpy as np
 
@@ -44,5 +45,5 @@ print("=" * 50)
 print("Evaluation")
 print("=" * 50)
 
-print(f"Mean Squared Error: {np.mean((y_pred - y_test) ** 2):.2f}")
-print(f"Mean Absolute Error : {np.mean((np.abs(y_pred - y_test))):.2f}")
+for key, value in evaluate(y_test, y_pred).items():
+    print(f"{key}: {value:.4f}")

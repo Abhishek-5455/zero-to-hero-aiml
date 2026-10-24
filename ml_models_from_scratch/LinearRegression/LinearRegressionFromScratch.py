@@ -29,7 +29,7 @@ class LinearRegression:
             self.W -= self.lr * dw
             self.b -= self.lr * db
 
-            if epoch % 50 == 0:
+            if epoch % 100 == 0:
                 predictions = X @ self.W + self.b
                 loss = np.mean((predictions - y) ** 2)
                 print(f"Epoch {epoch}: Loss: {loss}")
