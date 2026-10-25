@@ -1,12 +1,11 @@
-from .eda import eda
-from ml_models_from_scratch.load_data import load_data
-from .evaluate import evaluate
-from .LinearRegressionFromScratch import LinearRegression
-
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-import numpy as np
+from ml_models_from_scratch.load_data import load_data
+
+from .eda import eda
+from ..Evaluation.evaluate_regressor import evaluate
+from .LinearRegressionFromScratch import LinearRegression
 
 name, X, y = load_data(id=477)
 print(f"Exploratory data analysis for {name} dataset")

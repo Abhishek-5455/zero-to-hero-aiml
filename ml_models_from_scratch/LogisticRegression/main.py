@@ -1,11 +1,11 @@
-from ml_models_from_scratch.load_data import load_data
-from .eda import eda
-from .LogisticRegressionFromScratch import LogisticRegression
-from .evaluate import evaluate
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-import numpy as np
+from ml_models_from_scratch.load_data import load_data
+
+from .eda import eda
+from ..Evaluation.evaluate_multiclass_classifier import evaluate
+from .LogisticRegressionFromScratch import LogisticRegression
 
 name, X, y = load_data(id=267)
 print(f"Exploratory data analysis for {name} dataset")

@@ -1,5 +1,6 @@
 from ucimlrepo import fetch_ucirepo
 
+
 def load_data(id: int):
     dataset = fetch_ucirepo(id = id)
 
